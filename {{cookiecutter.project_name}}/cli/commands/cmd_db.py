@@ -2,8 +2,8 @@ import click
 
 from sqlalchemy_utils import database_exists, create_database
 
-from hoyt.app import create_app
-from hoyt.extensions import db
+from {{cookiecutter.app_name}}.app import create_app
+from {{cookiecutter.app_name}}.extensions import db
 
 # Create an app context for the database connection.
 app = create_app()

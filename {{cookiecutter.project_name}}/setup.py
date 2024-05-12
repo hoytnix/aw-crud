@@ -6,7 +6,7 @@ import sys
 
 import setuptools
 
-PACKAGE_NAME = 'hoyt'
+PACKAGE_NAME = '{{cookiecutter.app_name}}'
 MINIMUM_PYTHON_VERSION = 3, 5
 
 

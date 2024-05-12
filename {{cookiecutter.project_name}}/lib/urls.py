@@ -7,9 +7,9 @@ except ImportError:
 from flask import url_for, request
 from unidecode import unidecode
 
-from hoyt.extensions import Freezer
-from hoyt.app import create_app
-from hoyt.settings import settings
+from {{cookiecutter.app_name}}.extensions import Freezer
+from {{cookiecutter.app_name}}.app import create_app
+from {{cookiecutter.app_name}}.settings import settings
 
 _punct_re = re.compile(r'[\t !"#$%&\'()*\-/<=>?@\[\\\]^_`{|},.:]+')
 

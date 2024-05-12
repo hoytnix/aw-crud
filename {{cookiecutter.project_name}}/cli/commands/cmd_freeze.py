@@ -1,7 +1,7 @@
 import click
 
-from hoyt.extensions import Freezer
-from hoyt.app import create_app
+from {{cookiecutter.app_name}}.extensions import Freezer
+from {{cookiecutter.app_name}}.app import create_app
 
 
 @click.command()

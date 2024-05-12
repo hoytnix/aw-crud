@@ -7,7 +7,7 @@ import inspect
 def all_models():
     """A list of model-class objects."""
 
-    namespace = __import__('hoyt').blueprints
+    namespace = __import__('{{cookiecutter.app_name}}').blueprints
 
     modules = []
     for name, obj in inspect.getmembers(namespace):
@@ -35,7 +35,7 @@ def all_models():
 def all_blueprints():
     """A list of Blueprint objects."""
 
-    namespace = __import__('hoyt').blueprints
+    namespace = __import__('{{cookiecutter.app_name}}').blueprints
 
     modules = []
     for name, obj in inspect.getmembers(namespace):

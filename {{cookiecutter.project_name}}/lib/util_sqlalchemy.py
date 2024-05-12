@@ -4,7 +4,7 @@ from sqlalchemy import DateTime
 from sqlalchemy.types import TypeDecorator
 
 from lib.util_datetime import tzware_datetime
-from hoyt.extensions import db
+from {{cookiecutter.app_name}}.extensions import db
 
 
 class AwareDateTime(TypeDecorator):

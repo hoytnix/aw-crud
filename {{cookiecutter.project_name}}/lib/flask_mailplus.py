@@ -1,6 +1,6 @@
 from flask import render_template
 
-from hoyt.extensions import mail
+from {{cookiecutter.app_name}}.extensions import mail
 
 
 def send_template_message(template=None, ctx=None, *args, **kwargs):
