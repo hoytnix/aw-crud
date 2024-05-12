@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_admin.contrib.sqla import ModelView
 
-from{{cookiecutter.app_name}}.settings import settings
+from {{cookiecutter.app_name}}.settings import settings
 from {{cookiecutter.app_name}}.extensions import admin, db, md
 from lib.imports import all_blueprints, all_models
 
