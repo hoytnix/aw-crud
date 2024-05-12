@@ -1,26 +1,25 @@
-Flask==0.11.1
-Click==6.6
+Flask
+Click
 
 # Data and workers.
-psycopg2==2.6.2
-Flask-SQLAlchemy==2.1
-alembic==0.8.8
-SQLAlchemy-Utils==0.32.9
+Flask-SQLAlchemy
+alembic
+SQLAlchemy-Utils
 
 # Forms.
-wtforms==2.1
-Flask-WTF==0.13.1
-WTForms-Components==0.10.0
-WTForms-Alchemy==0.16.1
+wtforms
+Flask-WTF
+WTForms-Components
+WTForms-Alchemy
 
 # Utils.
-fake-factory==0.7.2
-unidecode==0.04.19
-pytz==2016.7
-anyconfig==0.7.0
+fake-factory
+unidecode
+pytz
+anyconfig
 
 # Extensions.
-flask-debugtoolbar==0.10.0
-Flask-Admin==1.4.2
-Flask-Misaka==0.4.1
-Frozen-Flask==0.13
+flask-debugtoolbar
+Flask-Admin
+Flask-Misaka
+Frozen-Flask
