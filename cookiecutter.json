@@ -1,0 +1,10 @@
+{
+  "full_name": "Michael Hoyt",
+  "email": "oloty@pm.me",
+  "project_name": "Aw,CRUD!?",
+  "repo_name": "aw-crud",
+  "project_short_description": "A Cookiecutter template for Python-Flask apps that Create, Remove, Update & Delete",
+  "release_date": "2024-05-11",
+  "year": "2024",
+  "version": "r1"
+}
