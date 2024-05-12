@@ -58,7 +58,7 @@ def extensions(app):
 
     # Flask-Admin
     _admin = admin(
-        app, url='/admin', name='{{cookiecutter.project_title}}', template_mode='bootstrap3')
+        app, url='/admin', name='{{cookiecutter.project_name}}', template_mode='bootstrap3')
     for model in all_models():
         _admin.add_view(ModelView(model, db.session))
 
