@@ -47,7 +47,7 @@ check_python_version()
 setuptools.setup(
     name=read_package_variable('__project__'),
     version=read_package_variable('__version__'),
-    description="My personal website.",
+    description="{{cookiecutter.project_short_description}}",
     url='https://hoyt.io',
     author='Michael Hoyt',
     author_email='base64(aG95dC5uaXhAZ21haWwuY29t)',

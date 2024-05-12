@@ -3,6 +3,7 @@
   "email": "oloty@pm.me",
    "github_username": "hoytnix",
   "project_name": "Aw,CRUD!?",
+  "app_name": "aw-crud",
   "repo_name": "aw-crud",
   "project_short_description": "A Cookiecutter template for Python-Flask apps that Create, Remove, Update & Delete",
   "release_date": "2024-05-11",

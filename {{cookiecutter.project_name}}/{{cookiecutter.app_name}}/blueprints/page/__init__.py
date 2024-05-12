@@ -1,4 +1,4 @@
 """For one-off pages that don't require models."""
 
-from hoyt.blueprints.page.views import page
-from hoyt.blueprints.page.models import Attribute, LastModified
+from {{cookiecutter.app_name}}.blueprints.page.views import page
+from {{cookiecutter.app_name}}.blueprints.page.models import Attribute, LastModified

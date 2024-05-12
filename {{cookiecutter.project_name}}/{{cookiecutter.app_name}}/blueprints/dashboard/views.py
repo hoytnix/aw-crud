@@ -4,7 +4,7 @@ from sqlalchemy import text
 
 from .forms import (SearchForm, BulkDeleteForm, PostForm)
 
-from hoyt.blueprints.blog import Post, Category, Tag
+from {{cookiecutter.app_name}}.blueprints.blog import Post, Category, Tag
 
 dashboard = Blueprint(
     'dashboard',

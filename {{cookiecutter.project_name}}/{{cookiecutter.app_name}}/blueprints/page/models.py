@@ -1,6 +1,6 @@
 import hashlib
 
-from hoyt.extensions import db
+from {{cookiecutter.app_name}}.extensions import db
 
 from lib.util_sqlalchemy import ResourceMixin
 

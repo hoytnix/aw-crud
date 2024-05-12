@@ -6,7 +6,7 @@ import pytz
 from flask import url_for
 from sqlalchemy import or_
 
-from hoyt.extensions import db
+from {{cookiecutter.app_name}}.extensions import db
 from lib.urls import slugify
 from lib.util_sqlalchemy import ResourceMixin
 

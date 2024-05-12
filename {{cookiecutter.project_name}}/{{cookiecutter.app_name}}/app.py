@@ -1,8 +1,8 @@
 from flask import Flask, request
 from flask_admin.contrib.sqla import ModelView
 
-from hoyt.settings import settings
-from hoyt.extensions import admin, db, md
+from{{cookiecutter.app_name}}.settings import settings
+from {{cookiecutter.app_name}}.extensions import admin, db, md
 from lib.imports import all_blueprints, all_models
 
 
@@ -31,7 +31,7 @@ def create_app(environment=None, settings_override=None):
 
     @app.after_request
     def update_last_modified(response):
-        from hoyt.blueprints.page import LastModified
+        from {{cookiecutter.app_name}}.blueprints.page import LastModified
         try:
             source = response.get_data()
             source = source.decode('utf-8', 'ignore')
@@ -58,7 +58,7 @@ def extensions(app):
 
     # Flask-Admin
     _admin = admin(
-        app, url='/admin', name='Hoyt.IO', template_mode='bootstrap3')
+        app, url='/admin', name='{{cookiecutter.project_title}}', template_mode='bootstrap3')
     for model in all_models():
         _admin.add_view(ModelView(model, db.session))
 
@@ -79,8 +79,8 @@ def template_processors(app):
     """
     from lib import current_year
     from lib.urls import canonical_url_for, canonical_request_url
-    from hoyt.blueprints.page.models import Attribute, LastModified
-    from hoyt.blueprints.blog.models import Tag
+    from {{cookiecutter.app_name}}.blueprints.page.models import Attribute, LastModified
+    from {{cookiecutter.app_name}}.blueprints.blog.models import Tag
 
     app.jinja_env.globals.update(current_year=current_year)
     app.jinja_env.globals.update(canonical_url_for=canonical_url_for)
