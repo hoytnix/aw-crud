@@ -4,12 +4,7 @@
 
 ### Installation
 
-```
-# Create project from the aw-crud.git repo template
-# You'll be prompted to enter values.
-# Then it'll create your Python package in the current working directory,
-# based on those values.
-$ cookiecutter https://github.com/hoytnix/aw-crud
-# For the sake of brevity, repos on GitHub can just use the 'gh' prefix
-$ cookiecutter gh:hoytnix/aw-crud
-```
+
+Create project from the aw-crud.git repo template. You'll be prompted to enter values. Then it'll create your Python package in the current working directory, based on those values.
+
+```$ cookiecutter gh:hoytnix/aw-crud```
