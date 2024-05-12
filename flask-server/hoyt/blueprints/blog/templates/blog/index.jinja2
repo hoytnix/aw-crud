@@ -1,0 +1,12 @@
+{% extends 'layouts/skeleton.jinja2' %}
+{% from 'blog/macros.jinja2' import post_preview, tag_cloud %}
+
+{% block body %}
+    <h1>Blog</h1>
+
+    {{ tag_cloud() }}
+
+    {% for post in posts %}
+        {{ post_preview(post) }}
+    {% endfor %}
+{% endblock %}

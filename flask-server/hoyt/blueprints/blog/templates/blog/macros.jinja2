@@ -1,0 +1,60 @@
+{% macro post_header(post, heading=1) -%}
+<div class="page-header">
+    <h{{ heading }}>{{ post.title }}</h{{ heading }}>
+    <div class="post-meta-details">
+        <i class="fa fa-fw icon-hourglass"></i> <script>document.write(moment("{{ post.created_on }}").format('MMMM Do, YYYY'));</script>
+        <i class="fa fa-fw icon-book"></i> {{ post.category.href }}
+
+        {% set first_tag = True %}
+        {% for tag in post.tags %}
+            {% if first_tag %}
+                <i class="fa fa-fw icon-tags"></i>
+                {{ tag.href }}
+                {% set first_tag = False %}
+            {% else %}, {{ tag.href }}{% endif %}
+        {% endfor %}
+    </div>
+</div>
+{%- endmacro %}
+
+{% macro post_preview(post) -%}
+<div class="post-preview">
+    {{ post_header(post, heading=2) }}
+
+    {{ post.preview_text|markdown }}
+
+    <div class="post-preview-all-link">
+        <a class="btn btn-primary" href="{{ post.url_for }}">Read more!</a>
+    </div>
+</div>
+{%- endmacro %}
+
+{% macro social_buttons() -%}
+<h3>Be social!</h3>
+
+<!-- Facebook -->
+<a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical_request_url() }}" target="_blank">
+    <i class="fa fa-4x icon-facebook" style="color:#3B5998"></i>
+</a>
+
+<!-- Google Plus -->
+<a href="https://plus.google.com/share?url={{ canonical_request_url() }}" target="_blank">
+    <i class="fa fa-4x icon-gplus" style="color:#DB4437"></i>
+</a>
+
+<!-- Twitter -->
+<a href="https://twitter.com/home?status=Check%20out%20{{ canonical_request_url() }}%20on%20Michael%20Hoyt's%20blog!" target="_blank">
+    <i class="fa fa-4x icon-twitter" style="color:#1DA1F3"></i>
+</a>
+{%- endmacro %}
+
+{% macro tag_cloud() %}
+<div class="tag-cloud">
+    <div class="tag-cloud-title">Tag Cloud:</div>
+    {% set cloud = tag_cloud_dict() %}
+    {% for tag in cloud %}
+        {% set size = 100 + (tag["count"] * 10) - 10 %}
+        <a href="#" class="btn btn-primary btn-xs" style="font-size:{{ size }}%">{{ tag["tag"].title }}</a>
+    {% endfor %}
+</div>
+{% endmacro %}

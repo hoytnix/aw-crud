@@ -1,0 +1,37 @@
+{% set page = page_attributes(request.path) %}
+
+{% macro open_graph() -%}
+    {% set og_set = ['audio', 'determiner', 'video'] %}
+    {% set og_enabled = True %}
+
+    {% set og_title = page.title %}
+    {% if page.og_title %}
+        {% set og_title = page.og_title %}
+    {% endif %}
+
+    {% if (not og_title) or (not page.og_image) %}
+        {% set og_enabled = False %}
+    {% endif %}
+
+    {% if og_enabled %}
+        {% for tag in og_set %}
+            {% if page['og_' + tag] %}
+                <meta property="og:{{ tag }}" content="{{ page['og_' + tag] }}" />
+            {% endif %}
+        {% endfor %}
+
+        <meta property="og:image" content={{ canonical_url_for('static', filename=page.og_image) }} />
+        <meta property="og:url" content="{{ canonical_request_url() }}" />
+        <meta property="og:site_name" content="Hoyt.IO" />
+
+        {% if page.meta_description %}
+            <meta property="og:description" content="{{ page.meta_description }}" />
+        {% endif %}
+
+        {% set og_type = 'website' %}
+        {% if page['og_type'] %}{% set og_type = page['og_type'] %}{% endif %}
+        <meta property="og:type" content="{{ og_type }}" />
+
+        <!-- TODO: Specials for each type: http://ogp.me/#types -->
+    {% endif %}
+{%- endmacro %}

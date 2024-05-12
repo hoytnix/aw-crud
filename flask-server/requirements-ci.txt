@@ -1,0 +1,14 @@
+# Linters
+pep257
+pylint
+
+# Testing
+pytest
+pytest-describe
+pytest-expecter
+pytest-cov
+pytest-random
+
+# Coverage
+coverage
+coverage.space >= 0.6.2

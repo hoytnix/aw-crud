@@ -1,0 +1,38 @@
+#
+# flask
+#
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+flask-server/hoyt/blueprints/blog/posts
+
+#
+# static server
+#
+
+static-server/node_modules/
+static-server/public/
+flask-server/hoyt/static/font
+flask-server/hoyt/static/fontello
+
+#
+# continuous integration
+#
+
+.cache
+env/
+.pytest
+.coverage
+.coverage.*
+htmlcov/
+xmlreport/
+/pyunit.xml
+*.tmp
+
+#
+# database
+#
+
+nohup.out
+database/backup.sql

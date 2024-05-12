@@ -1,0 +1,30 @@
+{% extends 'layouts/skeleton.jinja2' %}
+
+{% block body %}
+    <div class="container sm-margin-top">
+            <div class="row text-center lg-margin-bottom">
+                <h1>Hoyt.IO</h1>
+                <h3 class="text-muted">
+                    My eponymously titled weblog.
+                </h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-6">
+                    <i class="fa fa-fw fa-4x icon-github-circled"></i>
+                    <h2>Github</h2>
+                    <p class="text-muted">Where I Git.</p>
+                    <p>
+                        <a href="https://github.com/hoytnix" target="_blank" class="btn btn-primary">My applications</a>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <i class="fa fa-fw fa-4x icon-vector-pencil"></i>
+                    <h2>Blog</h2>
+                    <p class="text-muted">Where I write.</p>
+                    <p>
+                        <a href="{{ url_for('blog.index') }}" class="btn btn-primary">My publishing</a>
+                    </p>
+                </div>
+            </div>
+    </div>
+{% endblock %}

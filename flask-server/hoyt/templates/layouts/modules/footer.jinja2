@@ -1,0 +1,16 @@
+<footer class="footer">
+    <div class="container">
+        {% if config['GITHUB_URL'] %}
+            <ul class="list-inline" id="footer-right">
+                <li>Made with <a href="{{ config['GITHUB_URL'] }}" target="_blank">&hearts;</a> in <a href="http://www.cityofallegan.org/" target="_blank">Allegan</a>, <a href="http://www.michigan.org/" target="_blank">Michigan</a>.</li>
+            </ul>
+        {% endif %}
+
+        <ul class="list-inline">
+            <li class="text-muted">Michael Hoyt &copy; {{ current_year() }}</li>
+            <li><a href="{{ url_for('pages.privacy') }}">Privacy Policy</a></li>
+            <li><a href="{{ url_for('pages.terms') }}">Terms of Service</a></li>
+            <li><a href="{{ url_for('pages.sitemap') }}">Sitemap</a></li>
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,16 @@
+{% extends 'layouts/skeleton.jinja2' %}
+{% from 'blog/macros.jinja2' import post_preview %}
+
+{% set title = result.title %}
+
+{% block body %}
+    <h1>{{ result.title }}</h1>
+    <ol class="breadcrumb">
+        <li><a href="{{ url_for('blog.index') }}">Blog</a></li>
+        <li class="active">{{ result }}</li>
+    </ol>
+
+    {% for post in result.most_recent_posts %}
+        {{ post_preview(post) }}
+    {% endfor %}
+{% endblock %}

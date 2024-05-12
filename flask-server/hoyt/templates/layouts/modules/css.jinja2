@@ -1,0 +1,13 @@
+{% if config['DEBUG'] %}
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/vendor/bootstrap.css') }}">
+
+    <!-- App overrides -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+    <!-- Vendor applications -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontello/fontello.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/vendor/highlight-solarized-light.css') }}">
+{% else %}
+    <link rel="stylesheet" href="/static/styles/main.css">
+{% endif %}

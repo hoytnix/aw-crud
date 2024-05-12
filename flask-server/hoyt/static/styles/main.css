@@ -1,0 +1,276 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid #e9e9e9;
+
+    height: 60px;
+}
+
+#footer-right {
+    float: right;
+}
+
+#footer-right a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* Blog - preview
+-------------------------------------------------- */
+
+.post-preview {
+    padding-bottom: 40px;
+}
+
+.post-preview-all-link {
+    padding-top: 20px;
+}
+
+
+/* Blog - post navigation
+-------------------------------------------------- */
+
+.post-navigation {
+    padding: 20px 0px 40px 0px;
+}
+
+.post-nav-list {
+    list-style: none;
+    padding-left: 0px;
+
+    max-width: 1170px;
+}
+
+.post-nav-item {
+    float: left;
+    width: 50%;
+    min-height: 1px;
+}
+
+.post-nav-item > strong {
+    font-weight: normal;
+    font-size: 90%;
+}
+
+.post-nav-item > a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Blog - Facebook comments
+-------------------------------------------------- */
+
+.fb-comments, .fb-comments iframe[style], .fb-comments span[style] {width: 100% !important;}
+
+.tag-cloud {
+    padding-top: 10px;
+}
+
+.tag-cloud-title {
+    font-weight: bold;
+    font-size: 125%;
+}
+
+.tag-cloud span {
+    padding-right: 5px;
+}
+
+
+/* Banner - page cover
+-------------------------------------------------- */
+
+header.banner {
+    position: relative;
+    height: 300px;
+}
+
+header.banner .title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 4px 8px;
+    color: white;
+    margin: 0;
+}
+
+.title h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 3rem;
+    white-space: nowrap;
+}
+
+
+/* Search
+-------------------------------------------------- */
+
+.index-panels {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.index-panels:after {
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: inherit;
+}
+
+.index-panels h3 {
+    z-index: 15;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2rem;
+    transform: translate(-50%, -50%);
+}
+
+.table-main-results {
+    font-size: 200%;
+    height: 20px;
+}
+
+
+/* Fontello icons
+-------------------------------------------------- */
+.fa {
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    font: normal normal normal 14px/1 fontello;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.fa-4x {
+    font-size: 4em;
+}
+
+
+/* Margin and padding
+-------------------------------------------------- */
+.lg-margin-bottom {
+    margin-bottom: 60px;
+}
+
+.md-margin-bottom {
+    margin-bottom: 40px;
+}
+
+.lg-margin-top {
+    margin-top: 60px;
+}
+
+.md-margin-top {
+    margin-top: 40px;
+}
+
+.sm-margin-top {
+    margin-top: 20px;
+}
+
+
+/* Helpers
+-------------------------------------------------- */
+
+.small {
+    font-size: 12px;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.spinner {
+    display: none;
+}
+
+.scale-up {
+    transform: scale(1.05);
+}
+
+.quarter-faded {
+    opacity: 0.75;
+}
+
+.half-faded {
+    opacity: 0.5;
+}
+
+.relative {
+    position: relative;
+}
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+
+label {
+    font-weight: 400;
+}
+
+.checkbox input[type='checkbox'], .checkbox-inline input[type='checkbox'] {
+    margin-left: 0;
+}
+
+.alert-small {
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+.alert-error, .alert-message {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.alert-error hr, .alert-message hr {
+    border-top-color: #e4b9c0;
+}
+
+.alert-error .alert-link, .alert-message .alert-link {
+    color: #843534;
+}
+
+.col-header {
+    height: 26px;
+}
+
+dd {
+    margin-bottom: 8px;
+}

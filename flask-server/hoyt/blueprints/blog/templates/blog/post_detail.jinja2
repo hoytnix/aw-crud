@@ -1,0 +1,42 @@
+{% extends 'layouts/skeleton.jinja2' %}
+{% from 'blog/macros.jinja2' import post_header, social_buttons %}
+
+{% set title = post.title %}
+
+{% block body %}
+    <style>
+    .fb-comments, .fb-comments iframe[style], .fb-comments span[style] {width: 100% !important;}
+    </style>
+
+    {{ post_header(post) }}
+    <ol class="breadcrumb">
+        <li><a href="{{ url_for('blog.index') }}">Blog</a></li>
+        <li>{{ post.category.href }}</li>
+        <li class="active">{{ post.title }}
+    </ol>
+
+    {{ post.body|markdown }}
+
+    <nav class="post-navigation">
+        <ol class="post-nav-list">
+            <li class="post-nav-item" style="text-align: left">
+                {% if post.previous_post.title %}
+                    <strong>Previous Post</strong>
+                    {{ post.previous_post.href }}
+                {% endif %}
+            </li>
+            <li class="post-nav-item" style="text-align: right">
+                {% if post.next_post.title %}
+                    <strong>Next Post</strong>
+                    {{ post.next_post.href }}
+                {% endif %}
+            </li>
+        </ol>
+    </nav>
+
+    {{ social_buttons() }}
+
+    {% if post.comments_enabled %}
+        {% include 'layouts/modules/comments.jinja2' %}
+    {% endif %}
+{% endblock %}

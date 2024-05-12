@@ -1,0 +1,7 @@
+{% if banner_title and banner_img %}
+    <header class="banner" style="background:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url({{ banner_img }});background-size:cover;">
+        <div class="title">
+            <h1>{{ banner_title }}</h1>
+        </div>
+    </header>
+{% endif %}

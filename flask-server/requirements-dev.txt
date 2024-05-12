@@ -1,0 +1,22 @@
+# Documentation
+pylint
+docutils
+readme
+pdoc
+mkdocs
+pygments
+
+# Tooling
+yapf
+sniffer >= 0.3.6
+mock
+
+# Runner
+honcho
+
+# Build
+wheel
+pyinstaller
+
+# Release
+twine

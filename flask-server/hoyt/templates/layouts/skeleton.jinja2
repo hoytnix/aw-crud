@@ -1,0 +1,45 @@
+{% from 'layouts/modules/metadata.jinja2' import open_graph with context %}
+{% set page = page_attributes(request.path) %}
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% if page.meta_description %}
+            <meta name="description" content="{{ page.meta_description }}">
+        {% endif %}
+        {{ open_graph() }}
+
+        {% if page.title %}{% set title = page.title %}{% endif %}
+        <title>{% if title %}{{ title }} - {% endif %}Hoyt.IO</title>
+
+        {% include 'layouts/modules/favicon.jinja2' %}
+        {% include 'layouts/modules/css.jinja2' %}
+
+        <script src="{{ url_for('static', filename='scripts/vendor/moment.js') }}"></script>
+
+        {% if config['DEBUG'] %}
+            <script>
+                function alertRequestPath() {
+                    alert("{{ request.path }}");
+                }
+            </script>
+        {% endif %}
+    </head>
+    <body>
+        {% include 'layouts/modules/header.jinja2' %}
+
+        <main class="container">
+            <div class="md-margin-top">{% block heading %}{% endblock %}</div>
+            {% block body %}{% endblock %}
+
+            {% block comments %}{% endblock %}
+        </main>
+
+        {% include 'layouts/modules/footer.jinja2' %}
+        {% include 'layouts/modules/scripts.jinja2' %}
+        {% include 'layouts/modules/analytics.jinja2' %}
+    </body>
+</html>
